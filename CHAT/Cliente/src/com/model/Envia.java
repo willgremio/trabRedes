@@ -35,46 +35,28 @@ public class Envia {
     public void conecta() throws UnknownHostException, IOException{
         cliente = new Socket(this.host, this.porta);
         System.out.println("O cliente se conectou ao servidor!");
+        JFrameChat r = new JFrameChat(cliente.getInputStream());
+         new Thread(r).start();
     }
-//   public void executaMSG(String menssagem) throws UnknownHostException, IOException {
-//
-//
-//        // thread para receber mensagens do servidor
-//        JFrameChat r = new JFrameChat(cliente.getInputStream());
-//        new Thread(r).start();
-//
-//        // lê msgs do teclado e manda pro servidor
-//        Scanner s = new Scanner(System.in);
-//        PrintStream saida = new PrintStream(cliente.getOutputStream());
-//        while (s.hasNextLine()) {
-//          saida.println(s.nextLine());
-//        }
-//
-//        saida.close();
-//        s.close();
-//        cliente.close();    
-//   }
+
     
     public void EnviaMSG(String menssagem) throws UnknownHostException, IOException {
 
 
      // thread para receber mensagens do servidor
-     JFrameChat r = new JFrameChat(cliente.getInputStream());
-     new Thread(r).start();
+
 
      // lê msgs do teclado e manda pro servidor
     saida = new PrintStream(cliente.getOutputStream());
     saida.println(menssagem);
     
 
-    saida.close();
-    cliente.close();
 }
     
-//    public void close() throws IOException
-//    {
-//        saida.close();
-//        cliente.close(); 
-//    }
+    public void close() throws IOException
+    {
+        saida.close();
+        cliente.close(); 
+    }
        
 }

@@ -68,7 +68,7 @@ public class JFrameChat extends javax.swing.JFrame implements Runnable{
 
         jLabel1.setText("HOST SERVER:");
 
-        jTextFieldHostServer.setText("192.168.0.100");
+        jTextFieldHostServer.setText("192.168.25.31");
         jTextFieldHostServer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldHostServerActionPerformed(evt);
