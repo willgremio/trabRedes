@@ -68,7 +68,7 @@ public class JFrameChat extends javax.swing.JFrame implements Runnable{
 
         jLabel1.setText("HOST SERVER:");
 
-        jTextFieldHostServer.setText("192.168.25.31");
+        jTextFieldHostServer.setText("127.0.0.1");
         jTextFieldHostServer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldHostServerActionPerformed(evt);
@@ -162,10 +162,9 @@ public class JFrameChat extends javax.swing.JFrame implements Runnable{
      // recebe msgs do servidor e imprime na tela
      Scanner s = new Scanner(this.servidor);
      while (s.hasNextLine()) {
-        System.out.println(s.nextLine());
-        //JOptionPane.showMessageDialog(null, s.nextLine());
+//        System.out.println(s.nextLine());
 //        String aux = s.nextLine();
-//        jTextAreaReceber.setText(jTextAreaReceber.getText()+"\n"+aux);
+          jTextAreaReceber.append(s.nextLine()+"\n");
 //        
      }
    }
@@ -177,7 +176,7 @@ public class JFrameChat extends javax.swing.JFrame implements Runnable{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextAreaReceber;
+    public static javax.swing.JTextArea jTextAreaReceber;
     private javax.swing.JTextField jTextFieldEnviar;
     private javax.swing.JTextField jTextFieldHostServer;
     private javax.swing.JTextField jTextFieldPort;

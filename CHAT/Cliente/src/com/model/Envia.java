@@ -41,12 +41,6 @@ public class Envia {
 
     
     public void EnviaMSG(String menssagem) throws UnknownHostException, IOException {
-
-
-     // thread para receber mensagens do servidor
-
-
-     // lê msgs do teclado e manda pro servidor
     saida = new PrintStream(cliente.getOutputStream());
     saida.println(menssagem);
     
