@@ -42,6 +42,7 @@ public class JFrameChatServidor extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -60,6 +61,11 @@ public class JFrameChatServidor extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Enviar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Menssagem:");
 
@@ -139,6 +145,10 @@ public class JFrameChatServidor extends javax.swing.JFrame {
         SocketServer server = new SocketServer(this);
     }//GEN-LAST:event_jButtonStartActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -169,7 +179,7 @@ public class JFrameChatServidor extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    public final javax.swing.JTextArea jTextArea1 = new javax.swing.JTextArea();
+    public static javax.swing.JTextArea jTextArea1;
     public javax.swing.JTextField jTextField1;
     public javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables

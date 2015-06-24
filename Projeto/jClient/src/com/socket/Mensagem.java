@@ -14,15 +14,18 @@ import java.io.Serializable;
  * @author Gabriel
  */
 public class Mensagem implements Serializable{
+    //Tipo 1 mensagem, tipo 2 Arquivos
     public int tipo;
     public String conteudo;
     public File file;
 
+    //Objeto construido para mensagem
     public Mensagem(int tipo, String conteudo) {
         this.tipo = tipo;
         this.conteudo = conteudo;
     }
 
+    //Objeto construido para arquivo
     public Mensagem(int tipo, File file) {
         this.tipo = tipo;
         this.file = file;

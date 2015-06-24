@@ -58,13 +58,11 @@ import java.util.logging.Logger;
                 while ((msg = (Mensagem) inputStream.readObject()) != null){
                     //Ser for Mensagem que veio do servidor
                     if(msg.getTipo()==1){
-                        Mensagem mensagem = new Mensagem(msg.getTipo(), msg.getConteudo());
-                        System.out.println(mensagem.getConteudo());
+                        System.out.println(msg.getConteudo());
                     }
                     //Se for arquivo que veio do servidor
                     else if(msg.getTipo()==2){
-                        Mensagem mensagem = new Mensagem(msg.getTipo(), msg.getFile());
-                        System.out.println(salvar(mensagem));
+                        System.out.println(salvar(msg));
                     }
                 }
             } catch (IOException ex) {
