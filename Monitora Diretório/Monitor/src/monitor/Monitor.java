@@ -23,7 +23,7 @@ public class Monitor {
 
     public static void main(String[] args) {
 
-        Path path = Paths.get("C:\\Users\\gabriel.calderaro\\Desktop");
+        Path path = Paths.get("C:\\Users\\gabriel\\Desktop");
         WatchService watchService = null;
         try{
             watchService = FileSystems.getDefault().newWatchService();
