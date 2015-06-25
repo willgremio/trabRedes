@@ -33,7 +33,7 @@ public class SocketCliente {
     OutputStream os;
     
     public SocketCliente() throws IOException{
-        //Cria conezão
+        //Cria conexão
         cliente = new Socket("127.0.0.1", 12345);
         System.out.println("O Cliente se conectou ao servidor!");        
         outputStream = new ObjectOutputStream(cliente.getOutputStream());
